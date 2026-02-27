@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family%3DMiniver%26family%3DRibeye%26family%3DRighteous%26display%3Dswap%27%29%3B);
 *{
     margin:0;
     padding: 0;
@@ -50,7 +51,7 @@ header .navbar{
     border-radius: 50%;
     border: 2px solid white;
     display: flex;
-    align-items: center;
+    align-items: cemter;
     justify-content: center;
     transition: 0.3s ease;
 }
