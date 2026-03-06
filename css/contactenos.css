@@ -1,0 +1,168 @@
+/* --- ESTILOS GENERALES Y RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; /* Tipografía limpia similar a la imagen */
+}
+
+body {
+    background-color: #212121; /* Color de fondo oscuro principal */
+    color: #ffffff; /* Texto blanco por defecto */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- ESTILOS DE LA CABECERA (Header) --- */
+.header {
+    background-color: #3b141c; /* Color marrón muy oscuro de la cabecera */
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.container-header {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+}
+
+.logo i {
+    font-size: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Espacio entre enlaces */
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Estilo para el enlace activo (opcional, para que se parezca al diseño) */
+.nav a.active {
+    opacity: 0.8;
+}
+
+/* --- ESTILOS DEL CONTENIDO PRINCIPAL (Contacto) --- */
+.main-contact {
+    flex: 1; /* Ocupa el resto de la pantalla verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.container-contact {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centramos el título */
+}
+
+.contact-title {
+    font-size: 32px;
+    font-weight: normal;
+    color: #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 4px solid #f4c244; /* Línea amarilla subrayada */
+    margin-bottom: 70px; /* Espacio debajo del título */
+    text-transform: lowercase; /* Mantenemos minúsculas como en la imagen */
+}
+
+/* Diseño en cuadrícula (grid) de dos columnas */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 50px; /* Espacio entre columnas */
+    text-align: left; /* Alineamos el texto a la izquierda en las columnas */
+}
+
+/* --- COLUMNA DE INFORMACIÓN --- */
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 12px; /* Espacio entre líneas */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre icono y texto */
+    line-height: 1.4;
+}
+
+.contact-info i {
+    color: #ffffff; /* Iconos blancos */
+    width: 20px; /* Ancho fijo para alineación perfecta */
+    text-align: center;
+}
+
+/* --- COLUMNA DEL FORMULARIO --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre campos */
+}
+
+/* Estilos comunes para inputs, textarea y el div vacío */
+.contact-form input,
+.contact-form textarea,
+.contact-form .empty-field {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333333; /* Texto oscuro */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px;
+}
+
+/* Placeholder gris suave */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888888;
+}
+
+/* Área de mensaje que no se pueda redimensionar manualmente */
+.contact-form textarea {
+    resize: none;
+}
+
+/* Estilo para el campo adicional vacío al final */
+.contact-form .empty-field {
+    height: 50px; /* Altura similar a los inputs */
+}
+
+/* RESPONSIVE: Diseño para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container-header,
+    .contact-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-info p {
+        justify-content: center; /* Centramos iconos/texto en móvil */
+    }
+}

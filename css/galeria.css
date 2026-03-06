@@ -1,0 +1,103 @@
+/* --- ESTILOS DE LA CABECERA (Header) --- */
+.header {
+    background-color: #3b141c; /* Color marrón muy oscuro de la cabecera */
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.container-header {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+}
+
+.logo i {
+    font-size: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Espacio entre enlaces */
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}
+/* Aseguramos el fondo oscuro para toda la página */
+body {
+    background-color: #212121 !important;
+    margin: 0;
+    color: white;
+}
+
+/* Contenedor principal de la galería */
+.main-gallery {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Grid de 3 columnas */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 50px auto 0;
+}
+
+/* La tarjeta naranja */
+.orange-box {
+    background-color: #f39c12; /* Naranja exacto de tu Figma */
+    padding: 30px 15px; /* Espacio para que se vea el naranja arriba y abajo */
+    border-radius: 25px; /* Bordes muy redondeados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px; /* Altura fija para que todas sean iguales */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* La imagen dentro de la tarjeta */
+.orange-box img {
+    width: 90%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #f39c12; /* Para que no haya espacios raros */
+}
+
+/* EFECTO HOVER (Lo que pediste) */
+.orange-box:hover {
+    transform: scale(1.05); /* Se agranda un poco */
+    box-shadow: 0 10px 20px rgba(243, 156, 18, 0.4); /* Brillo naranja */
+}
+
+.orange-box:hover img {
+    width: 100%; /* La imagen se expande un poco más al tocarla */
+    height: 90%;
+}
+
+/* Responsivo para tablets y celulares */
+@media (max-width: 900px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+}

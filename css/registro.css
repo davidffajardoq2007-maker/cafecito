@@ -1,0 +1,92 @@
+/* --- ESTILOS ESPECÍFICOS DE REGISTRO --- */
+.register-body {
+    background-color: #3b141c; /* Fondo oscuro exterior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.register-card {
+    background-color: #d9c5c2; /* Color de fondo de la tarjeta en Figma */
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.user-icon-header {
+    background-color: #ff9f00; /* Naranja del icono */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+    color: #333;
+}
+
+.register-card h2 { font-size: 28px; margin-bottom: 5px; }
+.subtitle { font-size: 14px; font-weight: bold; margin-bottom: 30px; }
+
+.register-form { text-align: left; }
+
+.register-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+/* Fila para Nombre y Apellido */
+.register-form .row {
+    display: flex;
+    gap: 15px;
+}
+.register-form .col { flex: 1; }
+
+.hint { font-size: 11px; display: block; margin-top: 5px; }
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-register {
+    width: 100%;
+    background-color: #a044ff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer; /* Esto hace que aparezca la "manito" al pasar el mouse */
+    transition: background-color 0.3s; /* Un pequeño efecto de suavidad */
+}
+
+.btn-register:hover {
+    background-color: #8a32e6; /* Se oscurece un poco al pasar el mouse */
+}
+
+.footer-link { margin-top: 20px; font-size: 14px; font-weight: bold; }
+.footer-link a { color: #6e54ff; text-decoration: none; }
