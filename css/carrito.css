@@ -1,0 +1,140 @@
+/* --- ESTILOS ESPECÍFICOS DEL CARRITO --- */
+
+.cart-body {
+    background-color: #3b141c !important; /* El color vinotinto oscuro del fondo */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.cart-header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.cart-header-title i { font-size: 40px; }
+.cart-header-title h1 { font-size: 32px; }
+
+.cart-content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Dos columnas */
+    gap: 30px;
+    align-items: start;
+}
+
+/* Tarjeta Izquierda (Vacía) */
+.cart-status-card {
+    background: white;
+    border-radius: 25px;
+    padding: 60px 40px;
+    text-align: center;
+    color: #000;
+}
+
+.empty-cart-icon {
+    font-size: 60px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.cart-status-card h2 { font-size: 26px; margin-bottom: 10px; }
+.cart-status-card p { color: #555; margin-bottom: 30px; }
+
+.btn-explore {
+    background-color: #a044ff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Tarjeta Derecha (Checkout) */
+.checkout-card {
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    color: #333;
+}
+
+.checkout-section { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+.checkout-section:last-of-type { border-bottom: none; }
+
+.checkout-section h3 { font-size: 16px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+
+.summary-line { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 500; }
+.free-text { color: #2ecc71; font-weight: bold; }
+
+.total-box {
+    background-color: #f0eaff;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Formulario de envío */
+.checkout-card label { display: block; font-size: 12px; font-weight: bold; margin: 10px 0 5px; }
+.checkout-card input {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #333;
+    border-radius: 8px;
+}
+
+.form-row { display: flex; gap: 10px; }
+.form-group { flex: 1; }
+
+.payment-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1.5px solid #333;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+.payment-selector .arrow { margin-left: auto; }
+
+/* Botón Finalizar */
+.btn-finalize {
+    width: 100%;
+    background-color: #a044ff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.trust-badges { margin-top: 15px; font-size: 12px; font-weight: bold; }
+.trust-badges p { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.trust-badges p i { color: #2ecc71; }
+
+/* Responsivo */
+@media (max-width: 850px) {
+    .cart-content-grid { grid-template-columns: 1fr; }
+}

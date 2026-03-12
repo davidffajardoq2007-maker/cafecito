@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore Pro - Registro</title>
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="register-body">
+
+    <div class="register-card">
+        <div class="user-icon-header">
+            <i class="fas fa-user-plus"></i>
+        </div>
+
+        <h2>¡Únete a TechStore Pro!</h2>
+        <p class="subtitle">crea tu cuenta y disfruta de las ofertas exclusivas</p>
+
+        <form class="register-form">
+            <label><i class="far fa-id-card"></i> Número de identificación</label>
+            <input type="text">
+
+            <div class="row">
+                <div class="col">
+                    <label><i class="far fa-user"></i> Nombre</label>
+                    <input type="text" placeholder="Ej: Juan">
+                </div>
+                <div class="col">
+                    <label><i class="far fa-user"></i> Apellido</label>
+                    <input type="text" placeholder="Ej: Pérez">
+                </div>
+            </div>
+
+            <label><i class="far fa-calendar-alt"></i> Edad</label>
+            <input type="text" placeholder="Ej: 25">
+
+            <label><i class="far fa-envelope"></i> correo electronico</label>
+            <input type="email" placeholder="ejemplo@gmail.com">
+
+            <label><i class="fas fa-lock"></i> contraseña</label>
+            <input type="password">
+            <span class="hint">Mínimo 6 caracteres</span>
+
+            <label><i class="far fa-check-circle"></i> confirmar contraseña</label>
+            <input type="password" placeholder="........">
+
+            <div class="terms">
+                <input type="checkbox" id="terms">
+                <label for="terms">Acepto los términos y condiciones y política de privacidad</label>
+            </div>
+
+           <a href="index.html" style="text-decoration: none;">
+                <button type="button" class="btn-register">registrar</button></a>
+        </form>
+
+        <p class="footer-link">¿Ya tienes cuenta? <a href="login.html">inicia sesión aquí</a></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@300;400;600&family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #212121; /* Mantenemos tu fondo oscuro */
+    color: white;
+}
+
+/* --- ESTILOS DEL HEADER (Idénticos al Index) --- */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #3b141c;
+    top: 0;
+}
+
+header .navbar {
+    display: flex;
+    padding: 15px 5%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .nav-text { color: white; text-decoration: none; }
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: #3b141c;
+    background-color: #e2750f;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-login {
+    color: white;
+    font-size: 1.2rem;
+    padding: 8px 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+/* --- Menu Hamburguesa --- */
+.menu-toggle { display: none; }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+/* --- Responsive Header --- */
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .navbar .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #3b141c;
+        padding: 20px;
+        text-align: center;
+    }
+    .menu-toggle:checked ~ .nav-menu { display: flex; }
+    .menu-toggle:checked ~ .nav-actions .hamburger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle:checked ~ .nav-actions .hamburger span:nth-child(2) { opacity: 0; }
+    .menu-toggle:checked ~ .nav-actions .hamburger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* --- ESTILOS DE LA GALERÍA --- */
+.main-gallery {
+    text-align: center;
+    padding: 120px 20px 60px; /* Aumenté el padding superior para el header fixed */
+}
+
+.main-title {
+    font-size: 32px;
+    font-family: 'Righteous', cursive;
+    color: #e2750f; /* Naranja para resaltar sobre el fondo oscuro */
+}
+
+.main-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e2750f;
+    margin: 8px auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 50px auto 0;
+}
+
+.orange-box {
+    background-color: #f39c12;
+    padding: 30px 15px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.orange-box img {
+    width: 90%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #f39c12;
+}
+
+.orange-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(243, 156, 18, 0.4);
+}
+
+.orange-box:hover img {
+    width: 100%;
+    height: 90%;
+}
+
+@media (max-width: 900px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+}

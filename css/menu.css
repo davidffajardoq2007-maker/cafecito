@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@300;400;600&family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f5f5f5; /* Un fondo claro para que resalten las cards oscuras */
+}
+
+/* --- Estilos del Header (Idénticos al Index) --- */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #3b141c;
+    top: 0;
+}
+
+header .navbar {
+    display: flex;
+    padding: 15px 5%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .nav-text { color: white; }
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: #3b141c;
+    background-color: #e2750f;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-login {
+    color: white;
+    font-size: 1.2rem;
+    padding: 8px 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.nav-login:hover {
+    color: #3b141c;
+    background-color: #e2750f;
+    border-color: #e2750f;
+}
+
+/* --- Menú Hamburguesa --- */
+.menu-toggle { display: none; }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+/* --- Lógica Menú Responsive --- */
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    
+    .navbar .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #3b141c;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .menu-toggle:checked ~ .nav-menu { display: flex; }
+
+    .menu-toggle:checked ~ .nav-actions .hamburger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle:checked ~ .nav-actions .hamburger span:nth-child(2) { opacity: 0; }
+    .menu-toggle:checked ~ .nav-actions .hamburger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* --- Título de Sección --- */
+.main-title {
+    text-align: center;
+    margin-top: 110px; /* Espacio para que el header fixed no lo tape */
+    font-size: 32px;
+    font-family: 'Righteous', cursive;
+    color: #3b141c;
+}
+
+.main-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e2750f;
+    margin: 8px auto;
+}
+
+/* --- Contenedor de Productos --- */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ecard {
+    background: linear-gradient(145deg, #3b141c, #4a1a23);
+    border-radius: 20px;
+    flex: 1 1 calc(25% - 20px); 
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.ecard img { border-radius: 12px; margin-bottom: 15px; }
+
+.ecard h2 { font-family: 'Righteous', cursive; margin-bottom: 10px; font-size: 1.2rem; }
+
+.ecard p { font-size: 0.9rem; color: #ddd; margin-bottom: 20px; flex-grow: 1; }
+
+.btn-group { display: flex; gap: 8px; justify-content: center; }
+
+.btn-orange {
+    background-color: #e2750f;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.btn-orange:hover { background-color: #ff8c1a; transform: scale(1.05); }

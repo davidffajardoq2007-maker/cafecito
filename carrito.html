@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - Tu Carrito</title>
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="cart-body">
+
+    <main class="cart-container">
+        <div class="cart-header-title">
+            <i class="fas fa-shopping-cart"></i>
+            <h1>Tu Carrito</h1>
+        </div>
+
+        <div class="cart-content-grid">
+            
+            <div class="cart-status-card">
+                <div class="empty-cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h2>Tu carrito está vacío</h2>
+                <p>¡descubre productos increible y comienza tu compra</p>
+                <a href="menu.html" class="btn-explore">
+                    <i class="far fa-circle"></i> explorar productos
+                </a>
+            </div>
+
+            <aside class="checkout-card">
+                <div class="checkout-section">
+                    <h3><i class="far fa-file-alt"></i> Resumen del Pedido</h3>
+                    <div class="summary-line">
+                        <span>subtotal</span>
+                        <span>$0</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Envío</span>
+                        <span class="free-text">Gratis</span>
+                    </div>
+                    <div class="total-box">
+                        <span>Total</span>
+                        <span>$0</span>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Información de envío</h3>
+                    <label>dirección completa</label>
+                    <input type="text" placeholder="Ej: Calle 123 #45-67">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Ciudad</label>
+                            <input type="text" placeholder="Bogota">
+                        </div>
+                        <div class="form-group">
+                            <label>Código Postal</label>
+                            <input type="text" placeholder="110111">
+                        </div>
+                    </div>
+
+                    <label>Método de pago</label>
+                    <div class="payment-selector">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Efectivo contra entrega</span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </div>
+                </div>
+
+                <button class="btn-finalize">
+                    <i class="fas fa-check"></i> Finalizar compra
+                </button>
+
+                <div class="trust-badges">
+                    <p><i class="far fa-check-circle"></i> Compra segura y protegida</p>
+                    <p><i class="fas fa-box"></i> Envio gratis en compras +$100.000</p>
+                    <p>Atencion al cliente 24/7</p>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+</body>
+</html>
